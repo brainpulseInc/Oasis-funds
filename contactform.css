@@ -1,0 +1,57 @@
+body {
+    font-family: 'Quicksand';
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #f0eaea;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.144);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+
+.logo {
+    max-width: 80px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #b92f0c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 75%;
+    font-size:x-large
+    
+}
+
+.contact-form button:hover {
+    background-color: #e75b24;
+}
