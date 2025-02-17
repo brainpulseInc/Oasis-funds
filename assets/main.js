@@ -1,13 +1,19 @@
 jQuery(document).ready(function ($) {
-    $(".hamburger-menu").click(function () {
-        $(this).toggleClass("open");
-        $(".mobile-nav").toggleClass("open");
-    });
+    let lastScrollTop = 0;
+    let header = $("header");
+    let scrollThreshold = 50; // Adjust if needed -VJ
 
-    $(document).click(function (e) {
-        if (!$(e.target).closest(".mobile-menu").length) {
-            $(".hamburger-menu").removeClass("open");
-            $(".mobile-nav").removeClass("open");
+    $(window).on("scroll", function () {
+        let scrollTop = $(this).scrollTop();
+
+        if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+            // Scrolling Down - Hide Header -VJ
+            header.addClass("hidden");
+        } else {
+            // Scrolling Up - Show Header -VJ
+            header.removeClass("hidden");
         }
+
+        lastScrollTop = scrollTop;
     });
 });

@@ -55,10 +55,19 @@ table {
 }
 
 header {
-    padding: 17px 0;
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
+    background: white; 
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .main-header {
@@ -93,7 +102,7 @@ header {
 
 .main-menu .nav-links .menu-item a {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 21.6px;
     letter-spacing: -0.4px;
     text-decoration: none;
@@ -144,6 +153,13 @@ header {
     text-align: center;
     text-transform: uppercase;
     font-weight: 500;
+}
+
+.hero-banner h3 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+
 }
 
 .btn-learn {
@@ -258,12 +274,16 @@ header {
     text-align: left;
     gap: 28px;
     justify-content: center;
+    align-items: flex-start; /* Align items to the top -VJ */
 }
 
 .process-step {
-    width: 30%;
+    flex: 1;
     display: flex;
-    gap: 13px;
+    gap: 16px;
+    justify-content: flex-start;
+    min-height: 250px; /* Consistent height -VJ */
+    padding: 0; /* Ensure no padding adds vertical offset -VJ */
 }
 
 .process-step.step-2 {
@@ -278,6 +298,7 @@ header {
 
 .process-step.step-3 {
     gap: 15px;
+    align-self: flex-start; /* Aligns step 3 to the top -VJ */
 }
 
 .step-number {
@@ -482,7 +503,7 @@ footer {
 
 .ft-text h4 {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 22.4px;
     text-align: center;
     color: #fff;
@@ -500,7 +521,7 @@ ul.ft-nav-links {
 
 ul.ft-nav-links li.menu-item a {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 28.8px;
     letter-spacing: 0.2px;
     color: #fff;
@@ -727,7 +748,7 @@ ul.ft-nav-links li.menu-item a {
         padding: 0;
     }
     .ft-text h4 {
-        font-size: 24px;
+        font-size: 16px;
     }
     footer {
         padding: 40px 0;
