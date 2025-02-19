@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="contactform.css">
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link rel="shortcut icon" href="/assets/image/Logo-removebg-preview.png" type="image/x-icon">
+
+    <!-- Google reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="container">
-        <img src="./assets/image/Logo-removebg-preview.png" alt="Oasis Fund Logo" class="logo">
+        <a href="./index.html" id="logo-link">
+            <img src="./assets/image/Logo-removebg-preview.png" alt="Oasis Fund Logo" class="logo">
+        </a>
         <h1>OASIS FUNDS</h1>
         <h2>LET'S CONNECT</h2>
 
@@ -44,74 +49,67 @@
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="Phone Number">
-                </div>
-                <div class="form-group">
-                    <select id="country" name="country" required>
-                        <option value="" disabled selected>Select your country</option>
-                        <option value="USA">United States</option>
-                        <option value="Canada">Canada</option>
-                        <option value="UK">United Kingdom</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Germany">Germany</option>
-                        <option value="France">France</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-            </div>
-
             <div class="form-group">
                 <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
             </div>
 
             <!-- Checkbox for Terms & Conditions -->
-<div class="form-group checkbox-group">
-    <input type="checkbox" id="terms" required>
-    <label for="terms"><span></span> Yes, I do. I agree to the <a href="#" target="_blank">terms & conditions</a> and <a href="#" target="_blank">privacy policy</a>.</label>
-</div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">
+                    <span></span> Yes, I do. I agree to the 
+                    <a href="#" target="_blank">terms & conditions</a> and 
+                    <a href="#" target="_blank">privacy policy</a>.
+                </label>
+            </div>
 
+            <!-- reCAPTCHA v2 -->
+            <div class="g-recaptcha" data-sitekey="6LdCadwqAAAAACsWtjnNu-sam8nOS_KpPJjL0K2a"></div>
 
             <button type="submit">Submit Now</button>
         </form>
     </div>
 
+    <!-- Form Handling Script -->
     <script>
-       document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("contact-form");
-    const submitButton = form.querySelector("button[type='submit']");
-    const successMessage = document.getElementById("success-message");
-    const loadingContainer = document.getElementById("loading-container");
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("contact-form");
+            const submitButton = form.querySelector("button[type='submit']");
+            const successMessage = document.getElementById("success-message");
+            const loadingContainer = document.getElementById("loading-container");
 
-    // Ensure success message & loader are hidden on page load
-    successMessage.style.display = "none";
-    loadingContainer.style.display = "none";
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Hide submit button & show loading animation
-        submitButton.style.display = "none"; 
-        loadingContainer.innerHTML = `
-            <div class="loader"></div>
-            <span>Submitting...</span>
-        `;
-        loadingContainer.style.display = "flex";
-
-        setTimeout(() => {
-            // Hide form & loading animation
-            form.style.display = "none";
+            // Ensure success message & loader are hidden on page load
+            successMessage.style.display = "none";
             loadingContainer.style.display = "none";
 
-            // Show success message
-            successMessage.style.display = "block";
-        }, 2000); // 2-second delay
-    });
-});
-        </script>
-        
-        
-        
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Check if reCAPTCHA is completed
+                const recaptchaResponse = grecaptcha.getResponse();
+                if (!recaptchaResponse) {
+                    alert("Please complete the reCAPTCHA challenge.");
+                    return;
+                }
+
+                // Hide submit button & show loading animation
+                submitButton.style.display = "none"; 
+                loadingContainer.innerHTML = `
+                    <div class="loader"></div>
+                    <span>Submitting...</span>
+                `;
+                loadingContainer.style.display = "flex";
+
+                setTimeout(() => {
+                    // Hide form & loading animation
+                    form.style.display = "none";
+                    loadingContainer.style.display = "none";
+
+                    // Show success message
+                    successMessage.style.display = "block";
+                }, 2000); // 2-second delay
+            });
+        });
+    </script>
 </body>
 </html>
