@@ -59,10 +59,10 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: white; 
+    background: white;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     z-index: 1000;
-    margin-top: 30px;
+    padding: 15px 0;
 }
 
 header.hidden {
@@ -79,7 +79,11 @@ header.hidden {
 }
 
 .logo-site {
-    max-width: 138px;
+    max-width: 110px;
+    width: 100%;
+}
+.logo-site img {
+    max-width: 100px; /* Reduced logo size */
     width: 100%;
 }
 
@@ -112,8 +116,8 @@ header.hidden {
 }
 
 .btn-black a {
-    padding: 24px 32.5px;
-    background-color: #2C2C2C;
+    padding: 12px 24px;
+    background-color: #000;
     color: #fff;
     font-weight: 400;
     font-size: 16px;
