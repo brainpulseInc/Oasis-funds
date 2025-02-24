@@ -257,6 +257,7 @@ header.hidden {
     text-align: center;
     padding: 94px 0 72px;
     background-color: #fff;
+    margin-bottom: -90px;
 }
 
 .process-section .container {
@@ -308,15 +309,15 @@ header.hidden {
 }
 
 .step-number {
-    font-weight: 400;
-    font-size: 32px;
+    font-weight: 500;
+    font-size: 24px;
     line-height: 38.18px;
 }
 
 .step-title {
     font-weight: 500;
     font-size: 24px;
-    line-height: 28.8px;
+    line-height: 38.18px;
     letter-spacing: -0.4px;
     margin-bottom: 8px;
 }
@@ -516,7 +517,7 @@ footer {
 }
 
 .ft-text {
-    margin-left: 76px;
+    margin-left: -50px;
     margin-top: 39px;
 }
 
