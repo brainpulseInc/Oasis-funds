@@ -20,6 +20,8 @@ time, mark, audio, video {
 	vertical-align: baseline;
 
 }
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -140,32 +142,73 @@ header.hidden {
 .hero-banner {
     padding-top: 175px;
     padding-bottom: 102px;
-}
-
-.hero-banner h1 span {
-    font-weight: 700;
-    font-style: italic;
-    font-size: 72px;
-    line-height: 86.4px;
-    letter-spacing: -2.1px;
     text-align: center;
 }
 
 .hero-banner h1 {
-    font-weight: 700;
     font-size: 55px;
     line-height: 86.4px;
-    letter-spacing: -2.1px;
-    text-align: center;
+    letter-spacing:1.1px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 900 !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
-.hero-banner h3 {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 20px;
+/* Ensure "We", "acquire", and "companies" are black */
+.hero-banner h1 .black-text {
+    color: black !important;
+}
 
+/* Keep "awesome" italic while allowing for future style changes */
+.hero-banner h1 .italic-text {
+    font-style: italic !important;
+    font-weight: normal !important;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+/* Override any unwanted global styling */
+.hero-banner h1 span {
+    font-style: normal !important;
+    font-weight: 800 !important;
+    -webkit-text-stroke: 0px !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    display: inline !important;
+}
+
+/* Ensure no external text effects override these styles */
+* {
+    text-shadow: none !important;
+    -webkit-text-stroke: 0px !important;
+}
+
+/* Import Romanesco and Allura Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Romanesco&display=swap');
+
+/* Apply Romanesco Font to "awesome" */
+.hero-banner h1 .gradient-text {
+    font-family: "Romanesco", cursive;
+    font-weight: 350 !important;
+    font-style: italic !important;
+    font-size: 70px; /* Adjust as needed */
+    text-transform: capitalize;
+}
+
+/* Make "We acquire" and "companies" extra bold */
+.hero-banner h1 .bold-text {
+    font-family: Arial, sans-serif; /* Use a strong sans-serif */
+    font-weight: 900;
+    color: black;
+}
+
+
+.hero-banner h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    margin-top: 10px;
 }
 
 .btn-learn {
@@ -261,7 +304,8 @@ header.hidden {
 }
 
 .process-section .container {
-    max-width: 1111px ;
+    max-width: 1111px;
+    margin: 0 auto;
 }
 
 .process-title {
@@ -270,10 +314,9 @@ header.hidden {
     line-height: 48px;
     text-align: center;
     letter-spacing: -0.6px;
-    margin-bottom: 51px;
     max-width: 900px;
-    margin-left: 110px;
-    justify-content: center !important;
+    margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 .process-steps {
@@ -281,20 +324,20 @@ header.hidden {
     text-align: left;
     gap: 28px;
     justify-content: center;
-    align-items: flex-start; /* Align items to the top -VJ */
+    align-items: flex-start;
 }
 
+/* Individual Step Styling */
 .process-step {
     flex: 1;
     display: flex;
     gap: 16px;
     justify-content: flex-start;
-    min-height: 250px; /* Consistent height -VJ */
-    padding: 0; /* Ensure no padding adds vertical offset -VJ */
+    min-height: 250px;
+    padding: 0;
 }
 
 .process-step.step-2 {
-    gap: 16px;
     width: 328px !important;
     margin-right: 4%;
 }
@@ -305,7 +348,7 @@ header.hidden {
 
 .process-step.step-3 {
     gap: 15px;
-    align-self: flex-start; /* Aligns step 3 to the top -VJ */
+    align-self: flex-start;
 }
 
 .step-number {
@@ -329,6 +372,69 @@ header.hidden {
     letter-spacing: -0.2px;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .process-title {
+        font-size: 32px;
+        line-height: 40px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        flex-direction: column;
+        gap: 40px; /* Adds spacing between steps */
+        align-items: center;
+    }
+
+    .process-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .step-number {
+        font-size: 20px;
+    }
+
+    .step-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .process-step p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-title {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: -10px;
+    }
+
+    .process-step {
+        width: 100%;
+    }
+
+    .step-number {
+        font-size: 18px;
+    }
+
+    .step-title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .process-step p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
 .criteria-section {
     text-align: center;
     padding: 97px 0 95px;
@@ -734,6 +840,8 @@ ul.ft-nav-links li.menu-item a {
     }
     .process-steps {
         flex-direction: column;
+        gap: 40px; /* Adds spacing between steps */
+        align-items: center;
     }
     .main-header {
         justify-content: unset !important;
