@@ -192,7 +192,7 @@ header.hidden {
     font-family: "PP Editorial Old",serif;
     font-weight: 350 !important;
     font-style: italic !important;
-    font-size: 80px; /* Adjust as needed */
+    font-size: 70px; /* Adjust as needed */
     letter-spacing: -6px; /* Tighten the letter spacing */
     text-transform: capitalize;
 }
@@ -435,6 +435,11 @@ header.hidden {
         font-size: 14px;
         line-height: 20px;
     }
+    .process-step.step-3 {
+        margin-bottom: 40px;
+    }
+   
+
 }
 .criteria-section {
     text-align: center;
@@ -907,8 +912,12 @@ ul.ft-nav-links li.menu-item a {
     }
     .hero-banner h1,
     .hero-banner h1 span {
-        font-size: 32px;
+        font-size: 40px !important;
         line-height: 40px;
+    }
+
+    .hero-banner h1 .gradient-text {
+        font-size: 75px !important;
     }
     .btn-header a{
         font-size: 11px !important;
