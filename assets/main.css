@@ -185,21 +185,22 @@ header.hidden {
 }
 
 /* Import Romanesco and Allura Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Allura&family=Romanesco&display=swap');
+
 
 /* Apply Romanesco Font to "awesome" */
 .hero-banner h1 .gradient-text {
-    font-family: "Romanesco", cursive;
+    font-family: "PP Editorial Old",serif;
     font-weight: 350 !important;
     font-style: italic !important;
-    font-size: 70px; /* Adjust as needed */
+    font-size: 80px; /* Adjust as needed */
+    letter-spacing: -6px; /* Tighten the letter spacing */
     text-transform: capitalize;
 }
 
 /* Make "We acquire" and "companies" extra bold */
 .hero-banner h1 .bold-text {
     font-family: Arial, sans-serif; /* Use a strong sans-serif */
-    font-weight: 900;
+    font-weight: 750 !important;
     color: black;
 }
 
