@@ -152,9 +152,11 @@ h2 {
     100% { transform: rotate(360deg); }
 }
 
-@media (max-width:767px) {
-.g-recaptcha
-{
-    justify-items: center;
-}
-} 
+@media (max-width: 480px) { /* Targets smaller phones */
+    .g-recaptcha {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
