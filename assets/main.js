@@ -6,11 +6,17 @@ jQuery(document).ready(function ($) {
     // Hide/Show Header on Scroll
     $(window).on("scroll", function () {
         let scrollTop = $(this).scrollTop();
+        
         if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
             header.addClass("hidden");
+
+            // Close mobile menu when scrolling down
+            $(".hamburger-menu").removeClass("active");
+            $(".mobile-nav").removeClass("open");
         } else {
             header.removeClass("hidden");
         }
+        
         lastScrollTop = scrollTop;
     });
 
