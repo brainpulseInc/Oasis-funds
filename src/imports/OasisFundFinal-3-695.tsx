@@ -1,7 +1,13 @@
 import svgPaths from "./svg-m5813ljbto";
+<<<<<<< HEAD
 import imgImage25 from "../../assets/eecebd2ac44caafda063742ab12329d510dd76ed.png";
 import imgImage24 from "../../assets/008e2486ff5215dd62cdb02e9cee76c8bd8ef21c.png";
 import imgImage26 from "../../assets/b0937b59a181e671c27cf5734ee445dc8a89a39b.png";
+=======
+import imgImage25 from "@/assets/eecebd2ac44caafda063742ab12329d510dd76ed.png";
+import imgImage24 from "@/assets/008e2486ff5215dd62cdb02e9cee76c8bd8ef21c.png";
+import imgImage26 from "@/assets/b0937b59a181e671c27cf5734ee445dc8a89a39b.png";
+>>>>>>> 40efa56 (Initial commit for Vite React app)
 
 function MaskGroup() {
   return (

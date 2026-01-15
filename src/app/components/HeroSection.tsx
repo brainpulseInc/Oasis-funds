@@ -1,5 +1,9 @@
 import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 import heroBackground from '../../assets/755a8251a8bf535e147592dce2bd54e709fe81ae.png';
+=======
+import heroBackground from '@/assets/755a8251a8bf535e147592dce2bd54e709fe81ae.png';
+>>>>>>> 40efa56 (Initial commit for Vite React app)
 
 export function HeroSection() {
   return (

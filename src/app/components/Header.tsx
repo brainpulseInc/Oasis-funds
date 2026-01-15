@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import logo from '../../assets/5c4ecdc30505b86ca1ac7c5da1b128f4b98196c5.png';
+=======
+import logo from '@/assets/5c4ecdc30505b86ca1ac7c5da1b128f4b98196c5.png';
+>>>>>>> 40efa56 (Initial commit for Vite React app)
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

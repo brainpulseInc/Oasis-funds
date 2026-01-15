@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import holdPeriodIcon from '../../assets/2b4e7a21c97424940a6307e106444914e641bf0a.png';
 import moicIcon from '../../assets/b2ddcd627301038b24b1409ab590a8ef53ffb69a.png';
+=======
+import holdPeriodIcon from '@/assets/2b4e7a21c97424940a6307e106444914e641bf0a.png';
+import moicIcon from '@/assets/b2ddcd627301038b24b1409ab590a8ef53ffb69a.png';
+>>>>>>> 40efa56 (Initial commit for Vite React app)
 
 export function StatsSection() {
   const stats = [
