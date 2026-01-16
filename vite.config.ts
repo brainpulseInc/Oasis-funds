@@ -4,7 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/Oasis-funds/',
+  // Custom domain (https://oasisfunds.co) should use root base path
+  base: '/',
 
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if

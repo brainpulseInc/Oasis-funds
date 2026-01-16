@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import thesisDrivenIcon from '../../assets/82725e14400bce2a2e1ebf9e82f0e1bba5abf802.png';
-import operatorMindsetIcon from '../../assets/4f0bfd6cb155701650d8fa3ec0035fa69dfcd29c.png';
-import returnsCompoundIcon from '../../assets/e3296b32cc0fe24cc28b268ff33ac9bf2874a560.png';
-=======
 import thesisDrivenIcon from '@/assets/82725e14400bce2a2e1ebf9e82f0e1bba5abf802.png';
 import operatorMindsetIcon from '@/assets/4f0bfd6cb155701650d8fa3ec0035fa69dfcd29c.png';
 import returnsCompoundIcon from '@/assets/e3296b32cc0fe24cc28b268ff33ac9bf2874a560.png';
->>>>>>> 40efa56 (Initial commit for Vite React app)
 
 export function WhyInvestSection() {
   const benefits = [

@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import privateEquityIcon from '../../assets/d7f46adb7e6c7d8c645dbefc60c4e8374fc5f660.png';
-import realEstateIcon from '../../assets/a0cabf8ac5219d374e691826e017fb570e01ff19.png';
-import diversifiedLendingIcon from '../../assets/c85113486647d85f8f2b73d16b9e2c42fd763330.png';
-=======
 import privateEquityIcon from '@/assets/d7f46adb7e6c7d8c645dbefc60c4e8374fc5f660.png';
 import realEstateIcon from '@/assets/a0cabf8ac5219d374e691826e017fb570e01ff19.png';
 import diversifiedLendingIcon from '@/assets/c85113486647d85f8f2b73d16b9e2c42fd763330.png';
->>>>>>> 40efa56 (Initial commit for Vite React app)
 
 export function FocusSection() {
   const focuses = [

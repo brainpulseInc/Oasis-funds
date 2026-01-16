@@ -1,11 +1,6 @@
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-import workingWithUsBackground from '../../assets/03251257aecf74a2c8fc9660b96b62e92d3caeff.png';
-import threeStrategiesBackground from '../../assets/30b2a2ab81dedb4631b15e0345c2c3f6d1bad611.png';
-=======
 import workingWithUsBackground from '@/assets/03251257aecf74a2c8fc9660b96b62e92d3caeff.png';
 import threeStrategiesBackground from '@/assets/30b2a2ab81dedb4631b15e0345c2c3f6d1bad611.png';
->>>>>>> 40efa56 (Initial commit for Vite React app)
 
 interface CTASectionProps {
   variant: 'orange' | 'blue';
