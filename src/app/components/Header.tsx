@@ -62,10 +62,15 @@ export function Header() {
             </button>
           </nav>
 
-          {/* Sign In Button */}
-          <button className="hidden md:block bg-white text-black px-6 py-2 rounded text-sm font-medium hover:bg-white/90 transition-colors" style={{ fontFamily: 'var(--font-family-body)' }}>
-            Contact Us
-          </button>
+          {/* Contact Us Button */}
+<a
+  href="/contactform.html"
+  className="hidden md:block bg-white text-black px-6 py-2 rounded text-sm font-medium hover:bg-white/90 transition-colors"
+  style={{ fontFamily: 'var(--font-family-body)' }}
+>
+  Contact Us
+</a>
+
 
           {/* Mobile Menu Button */}
           <button
