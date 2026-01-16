@@ -18,8 +18,14 @@ export function HeroSection() {
             Partnering with accredited investors to compound wealth through Private Equity, Real Estate and Private Debt.
           </p>
           <button className="group bg-white text-black px-6 py-3 font-medium hover:bg-black hover:text-white transition-all duration-300 flex items-center gap-2 text-2xl">
-            Talk to a Partner
-            <ArrowRight size={32} className="group-hover:translate-x-1 transition-transform" />
+         <a
+  href="/contactform.html"
+  className="group bg-white text-black px-6 py-3 font-medium hover:bg-black hover:text-white transition-all duration-300 flex items-center gap-2 text-2xl"
+>
+  Talk to a Partner
+  <ArrowRight size={32} className="group-hover:translate-x-1 transition-transform" />
+</a>
+
           </button>
         </div>
       </div>
