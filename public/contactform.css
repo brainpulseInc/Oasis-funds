@@ -1,6 +1,6 @@
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #180808d5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +30,7 @@ h2 {
 
 
 .logo {
-    max-width: 90px; 
+    max-width: 200px; 
     margin-bottom: 20px;
 }
 
