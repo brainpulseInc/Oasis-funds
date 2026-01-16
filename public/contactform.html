@@ -1,124 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | Oasis Funds</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactform.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="shortcut icon" href="/assets/image/Logo-removebg-preview.png" type="image/x-icon">
 
-  <link rel="stylesheet" href="/contactform.css" />
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="/assets/image/Logo-removebg-preview.png" />
-
-  <!-- Google reCAPTCHA v2 -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Google reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-
 <body>
-  <!-- Top bar (matches homepage "dark" feel) -->
-  <header class="topbar">
-    <a class="brand" href="/">
-      <img src="/assets/image/Logo-removebg-preview.png" alt="Oasis Funds Logo" class="brand-logo" />
-      <span class="brand-name">Oasis Funds</span>
-    </a>
-
-    <nav class="topnav">
-      <a href="/#our-focus">Our Focus</a>
-      <a href="/#why-us">Why Us</a>
-      <a href="/#target-returns">Target Returns</a>
-      <a class="nav-cta" href="/contactform.html">Contact Us</a>
-    </nav>
-  </header>
-
-  <main class="page">
-    <section class="card">
-      <div class="card-head">
-<img src="/assets/image/Logo-removebg-preview.png" alt="Oasis Fund Logo" class="logo">
+    <div class="container">
+        <a href="./index.html" id="logo-link">
+            <img src="/dist/assets/5c4ecdc30505b86ca1ac7c5da1b128f4b98196c5-Ba2u9Rke.png" alt="Oasis Fund Logo" class="logo">
+        </a>
         <h1>OASIS FUNDS</h1>
-        <h2>LET&#39;S CONNECT</h2>
-        <p class="subtext">Send us a message and our team will get back to you as soon as possible.</p>
-      </div>
+        <h2>LET'S CONNECT</h2>
 
-      <!-- Success Message (Hidden by Default) -->
-      <div id="success-message" class="hidden success">
-        <h3>Thanks for your message.</h3>
-        <p>Our team will get back to you as soon as possible.</p>
-        <a class="back-link" href="/">Back to homepage</a>
-      </div>
-
-      <!-- Loading Animation (Hidden by Default) -->
-      <div id="loading-container" class="hidden loading">
-        <div class="loader"></div>
-        <span>Submitting...</span>
-      </div>
-
-      <form id="contact-form" class="contact-form" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <input type="text" id="first-name" name="first-name" placeholder="First Name" required />
-          </div>
-          <div class="form-group">
-            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required />
-          </div>
+        <!-- Success Message (Hidden by Default) -->
+        <div id="success-message" class="hidden">
+            <h3>Thanks for your message. Our team will get back to you as soon as possible.</h3>
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <input type="email" id="email" name="email" placeholder="Email Address" required />
-          </div>
-          <div class="form-group">
-            <input type="text" id="company" name="company" placeholder="Company Name" />
-          </div>
+        <!-- Loading Animation (Hidden by Default) -->
+        <div id="loading-container" class="hidden">
+            <div class="loader"></div>
+            <p>Submitting...</p>
         </div>
 
-        <div class="form-group">
-          <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
-        </div>
+        <form id="contact-form" class="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                </div>
+            </div>
 
-        <div class="recaptcha-wrap">
-          <div class="g-recaptcha" data-sitekey="6LdCadwqAAAAACsWtjnNu-sam8nOS_KpPJjL0K2a"></div>
-        </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="company" name="company" placeholder="Company Name">
+                </div>
+            </div>
 
-        <button type="submit" class="submit-btn">Submit</button>
-      </form>
-    </section>
-  </main>
+            <div class="form-group">
+                <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+            </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contact-form");
-      const submitButton = form.querySelector("button[type='submit']");
-      const successMessage = document.getElementById("success-message");
-      const loadingContainer = document.getElementById("loading-container");
+            <!-- reCAPTCHA v2 -->
+            <div class="g-recaptcha" data-sitekey="6LdCadwqAAAAACsWtjnNu-sam8nOS_KpPJjL0K2a"></div>
 
-      // Ensure hidden on load
-      successMessage.classList.add("hidden");
-      loadingContainer.classList.add("hidden");
+            <button type="submit">Submit Now</button>
+        </form>
+    </div>
 
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
+    <!-- Form Handling Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("contact-form");
+            const submitButton = form.querySelector("button[type='submit']");
+            const successMessage = document.getElementById("success-message");
+            const loadingContainer = document.getElementById("loading-container");
 
-        // reCAPTCHA must be completed
-        const recaptchaResponse = window.grecaptcha ? grecaptcha.getResponse() : "";
-        if (!recaptchaResponse) {
-          alert("Please complete the reCAPTCHA challenge.");
-          return;
-        }
+            // Ensure success message & loader are hidden on page load
+            successMessage.style.display = "none";
+            loadingContainer.style.display = "none";
 
-        // Show loader, disable button
-        submitButton.disabled = true;
-        submitButton.textContent = "Submitting...";
-        loadingContainer.classList.remove("hidden");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent default form submission
 
-        // Simulate submit for now (replace with real submit later)
-        setTimeout(() => {
-          loadingContainer.classList.add("hidden");
-          form.classList.add("hidden");
-          successMessage.classList.remove("hidden");
-        }, 1200);
-      });
-    });
-  </script>
+                // Check if reCAPTCHA is completed
+                const recaptchaResponse = grecaptcha.getResponse();
+                if (!recaptchaResponse) {
+                    alert("Please complete the reCAPTCHA challenge.");
+                    return;
+                }
+
+                // Hide submit button & show loading animation
+                submitButton.style.display = "none"; 
+                loadingContainer.innerHTML = `
+                    <div class="loader"></div>
+                    <span>Submitting...</span>
+                `;
+                loadingContainer.style.display = "flex";
+
+                setTimeout(() => {
+                    // Hide form & loading animation
+                    form.style.display = "none";
+                    loadingContainer.style.display = "none";
+
+                    // Show success message
+                    successMessage.style.display = "block";
+                }, 2000); // 2-second delay
+            });
+        });
+    </script>
 </body>
 </html>
