@@ -206,6 +206,7 @@ h2 {
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(6px);
+  color: #ffffff;
 }
 
 .success-logo {
@@ -215,6 +216,11 @@ h2 {
 
 .success-card h2 {
   margin-bottom: 14px;
+   color: #ffffff;
+}
+
+.success-card p {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .success-cta {
@@ -224,4 +230,5 @@ h2 {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+   color: #4ade80; /* green accent, adjust if needed */
 }
