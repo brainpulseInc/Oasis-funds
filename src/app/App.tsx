@@ -5,7 +5,7 @@ import { FocusSection } from '@/app/components/FocusSection';
 import { CTASection } from '@/app/components/CTASection';
 import { WhyInvestSection } from '@/app/components/WhyInvestSection';
 import { TargetReturnsSection } from '@/app/components/TargetReturnsSection';
-import { TestimonialSection } from '@/app/components/TestimonialSection';
+//import { TestimonialSection } from '@/app/components/TestimonialSection';//
 import { Footer } from '@/app/components/Footer';
 
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
         <WhyInvestSection />
         <CTASection variant="blue" />
         <TargetReturnsSection />
-        <TestimonialSection />
+        {/*<TestimonialSection />*/}
       </main>
       <Footer />
     </div>

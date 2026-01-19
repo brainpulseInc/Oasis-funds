@@ -18,7 +18,7 @@ export function FocusSection() {
       icon: diversifiedLendingIcon,
       title: 'Secured Lending',
       subtitle: '(Coming 2026)',
-      description: 'Provide secured loans to real estate investors and developers. First mortgages and mezzanine financing available',
+      description: 'Provide secured loans to real estate investors and developers. First mortgages and mezzanine financing available.',
     },
   ];
 
